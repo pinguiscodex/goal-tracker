@@ -1,0 +1,37 @@
+# Root
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# All node_modules recursively
+**/node_modules/
+**/dist/
+
+# Next.js
+app/frontend/.next/
+app/frontend/out/
+
+# NestJS
+app/backend/dist/
+
+# Env & secrets
+.env*
+!.env.example
+
+# Logs & temp
+*.log
+.DS_Store
+Thumbs.db
+tmp/
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+
+# TS
+*.tsbuildinfo
+coverage/
+
+# OS generated
+*.tmp
