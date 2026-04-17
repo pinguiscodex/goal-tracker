@@ -1,0 +1,19 @@
+{
+  "name": "goal-tracker",
+  "version": "0.0.0",
+  "description": "Track goals during soccer matches! The main scope of the appliaction is soccer goal tracking for private or small matches without an official table, but it can also be used for other sports. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pinguiscodex/goal-tracker.git"
+  },
+  "keywords": [
+    "soccer"
+  ],
+  "author": "pinguiscodex",
+  "license": "LGPL-3.0-or-later",
+  "homepage": "https://github.com/pinguiscodex/goal-tracker#readme"
+}
