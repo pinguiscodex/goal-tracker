@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./AuthForm.module.css";
 import { AuthMode, AuthFormValues, validatePassword } from "@/lib/auth";
 
@@ -12,17 +12,11 @@ interface AuthFormProps {
 export default function AuthForm({ mode, onSubmit }: AuthFormProps) {
   const [formData, setFormData] = useState<AuthFormValues>({
     username: "",
+    email: "",
     password: "",
     confirmPassword: "",
   });
   const [error, setError] = useState<string | null>(null);
-
-  // Reset form when mode changes - intentional UX for clean tab switching.
-  // This is a controlled, single-state update and does not cause performance issues.
-  useEffect(() => {
-    setFormData({ username: "", password: "", confirmPassword: "" });
-    setError(null);
-  }, [mode]);
 
   const handleChange =
     (field: keyof AuthFormValues) =>
@@ -55,11 +49,22 @@ export default function AuthForm({ mode, onSubmit }: AuthFormProps) {
     <form className={styles.authForm} onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Username"
+        placeholder={mode === "login" ? "Username or Email" : "Username"}
         value={formData.username}
         onChange={handleChange("username")}
         required
       />
+      <div
+        className={`${styles.formFieldWrapper} ${mode === "signup" ? styles.formFieldWrapperVisible : ""}`}
+      >
+        <input
+          type="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange("email")}
+          required={mode === "signup"}
+        />
+      </div>
       <input
         type="password"
         placeholder="Password"
@@ -68,7 +73,6 @@ export default function AuthForm({ mode, onSubmit }: AuthFormProps) {
         required
       />
 
-      {/* Smoothly animated confirm password field */}
       <div
         className={`${styles.formFieldWrapper} ${mode === "signup" ? styles.formFieldWrapperVisible : ""}`}
       >

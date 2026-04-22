@@ -1,0 +1,143 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: solid var(--foreground) 0.1rem;
+  background: var(--background);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.navLink:hover {
+  opacity: 0.7;
+}
+
+.navButton {
+  color: var(--background);
+  background: var(--foreground);
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.clubSelector {
+  position: relative;
+}
+
+.clubButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--foreground);
+  color: var(--background);
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.dropdownArrow {
+  font-size: 0.75rem;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: var(--background);
+  border: solid var(--foreground) 0.1rem;
+  border-radius: 0.6rem;
+  min-width: 180px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--foreground);
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.dropdownItem:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dropdownItem.active {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.dropdownItemNew {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  color: var(--foreground);
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-top: solid var(--foreground) 0.05rem;
+}
+
+.dropdownItemNew:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.username {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.logoutButton {
+  background: transparent;
+  color: var(--foreground);
+  border: solid var(--foreground) 0.1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.logoutButton:hover {
+  background: var(--foreground);
+  color: var(--background);
+}

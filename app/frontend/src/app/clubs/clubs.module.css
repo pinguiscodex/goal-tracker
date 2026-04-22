@@ -1,0 +1,183 @@
+.page {
+  min-height: calc(100vh - 70px);
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.createButton {
+  background: var(--foreground);
+  color: var(--background);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.searchSection {
+  margin-bottom: 2rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: solid var(--foreground) 0.1rem;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-width: 0.15rem;
+}
+
+.createForm {
+  background: var(--background);
+  border: solid var(--foreground) 0.1rem;
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.createForm h3 {
+  margin-bottom: 1rem;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: solid var(--foreground) 0.08rem;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: inherit;
+}
+
+.formTextarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.formButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.submitButton {
+  background: var(--foreground);
+  color: var(--background);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.6rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancelButton {
+  background: transparent;
+  color: var(--foreground);
+  border: solid var(--foreground) 0.1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.clubsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.clubCard {
+  border: solid var(--foreground) 0.1rem;
+  border-radius: 0.8rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.clubCard.selected {
+  border-width: 0.15rem;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.clubName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.clubDescription {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+  flex-grow: 1;
+}
+
+.clubLocation {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+.clubActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.subscribeButton,
+.viewButton {
+  background: var(--foreground);
+  color: var(--background);
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.unsubscribeButton {
+  background: transparent;
+  color: var(--foreground);
+  border: solid var(--foreground) 0.08rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.emptyState {
+  text-align: center;
+  opacity: 0.6;
+  padding: 2rem;
+}
